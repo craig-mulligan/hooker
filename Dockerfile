@@ -6,4 +6,5 @@ COPY . /app
 
 ENV INITSYSTEM on
 
-CMD ["forever", "-o /data/out.log -e /data/err.log start /app/server.js"]
+WORKDIR /app
+CMD ["forever", "-o out.log -e err.log start server.js"]
