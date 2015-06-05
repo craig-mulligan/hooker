@@ -1,6 +1,6 @@
 FROM nghiant2710/rpi-node
 
-RUN npm install forever
+RUN npm install forever -g
 
 ENV INITSYSTEM on
 
