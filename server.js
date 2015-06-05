@@ -1,11 +1,13 @@
 var util = require('util'),  
     http = require('http');
+    port = 8080
 
 http.createServer(function (req, res) {  
   res.writeHead(200, {'Content-Type': 'text/plain'});
-  res.write('hello, i know nodejitsu.')
+  res.write('Forever? forever eva? forever eva?')
   res.end();
-}).listen(8000);
+  console.log("Server listening on: http://localhost:%s", port);
+}).listen(port);
 
 /* server started */  
 util.puts('> hello world running on port 8000');
