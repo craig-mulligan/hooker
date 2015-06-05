@@ -10,7 +10,7 @@ http.createServer(function (req, res) {
 }).listen(port);
 
 /* server started */  
-util.puts('> hello world running on port 8000');
+util.puts('> hello world running on port 8080');
 
 setTimeout(function () {  
   util.puts('Throwing error now.');
