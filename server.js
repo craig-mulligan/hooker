@@ -12,7 +12,7 @@ http.createServer(function (req, res) {
 /* server started */  
 util.puts('> hello world running on port 8080');
 
-setTimeout(function () {  
-  util.puts('Throwing error now.');
-  throw new Error('User generated fault.');
-}, 5000);
+// setTimeout(function () {  
+//   util.puts('Throwing error now.');
+//   throw new Error('User generated fault.');
+// }, 5000);
