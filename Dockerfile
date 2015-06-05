@@ -6,4 +6,4 @@ COPY . /app
 
 ENV INITSYSTEM on
 
-CMD ["node", "/app/server.js"]
+CMD ["forever", "-o out.log -e err.log start /app/server.js"]
