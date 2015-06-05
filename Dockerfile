@@ -1,4 +1,4 @@
-FROM nghiant2710/armv7-rpi
+FROM nghiant2710/rpi-node
 
 RUN npm install forever
 
