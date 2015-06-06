@@ -9,10 +9,10 @@ http.createServer(function (req, res) {
   console.log("Server listening on: http://localhost:%s", port);
 }).listen(port);
 
-/* server started */  
-util.puts('> hello world running on port 8080');
+// /* server started */  
+// util.puts('> hello world running on port 8080');
 
-setTimeout(function () {  
-  util.puts('Throwing error now.');
-  throw new Error('User generated fault.');
-}, 5000);
+// setTimeout(function () {  
+//   util.puts('Throwing error now.');
+//   throw new Error('User generated fault.');
+// }, 5000);
