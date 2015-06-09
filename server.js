@@ -7,17 +7,16 @@ var execOptions = {
      maxBuffer: 1024 * 1024 // 1mb
 }
 
-setInterval(function() {  console.log("purps"); }, 2000);
+setInterval(function() {  console.log("pinks"); }, 2000);
 
 gith({
     repo: 'craig-mulligan/hooker'
 }).on( 'all', function( payload ) {
-    console.log("master action triggered")
     if( payload.branch === 'master' )
         console.log("master action triggered")
     {
             // Exec a shell script
-            execFile('hooks.sh', function(error, stdout, stderr) {
+            execFile('/app/hooks.sh', function(error, stdout, stderr) {
                     // Log success in some manner
                     console.log( 'exec complete test' );
             });
