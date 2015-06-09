@@ -1,8 +1,8 @@
 FROM nghiant2710/rpi-node
 
-RUN apt-get install git && npm install gith -g
-
 COPY . /app
+
+RUN apt-get install git && cd /app && npm install gith
 
 ENV INITSYSTEM on
 
