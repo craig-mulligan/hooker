@@ -17,7 +17,7 @@ gith({
         console.log("master action triggered")
     {
             // Exec a shell script
-            execFile('start.sh', function(error, stdout, stderr) {
+            execFile('hooks.sh', function(error, stdout, stderr) {
                     // Log success in some manner
                     console.log( 'exec complete test' );
             });
