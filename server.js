@@ -1,7 +1,10 @@
 // Listen on port 9001
 var gith = require('gith').create(8080);
 // Import execFile, to run our bash script
-var execFile = require('child_process').execFile;
+var sys = require('sys')
+var exec = require('child_process').exec;
+function puts(error, stdout, stderr) { sys.puts(stdout) }
+
 
 var execOptions = {
      maxBuffer: 1024 * 1024 // 1mb
@@ -16,12 +19,6 @@ gith({
         console.log("master action triggered")
     {
             // Exec a shell script
-            execFile('/app/hook.sh', execOptions, function(error, stdout, stderr) {
-                    // Log success in some manner
-                    console.log( 'exec complete test' );
-                    if(error){ console.log(error); } 
-                    console.log('stdout:\t',stdout); 
-                    console.log('stderr:\t',stderr); 
-            });
+           exec("bash /app/hook.sh", puts);
     }
 });
