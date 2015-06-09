@@ -1,1 +1,1 @@
-setInterval(function() {  console.log("flipsexy!"); }, 4000);
+setInterval(function() {  console.log("final!"); }, 4000);
