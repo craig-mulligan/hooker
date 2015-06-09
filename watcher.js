@@ -19,9 +19,11 @@ gith({
             execFile('/app/hook.sh', execOptions, function(error, stdout, stderr) {
                     // Log success in some manner
                     console.log( 'exec complete test' );
-                    if(error){ console.log(error); } 
-                    console.log('stdout:\t',stdout); 
-                    console.log('stderr:\t',stderr); 
+                    console.log('stdout: ' + stdout);
+                    console.log('stderr: ' + stderr);
+                    if (error !== null) {
+                      console.log('exec error: ' + error);
+                    }
             });
     }
 });
