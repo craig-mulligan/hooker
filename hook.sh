@@ -1,1 +1,1 @@
-cd /app && git pull origin master && /usr/local/bin/node server.js
+cd /app && pkill -f node && git pull origin master && /usr/local/bin/node server.js
