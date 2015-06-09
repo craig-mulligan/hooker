@@ -7,7 +7,7 @@ var execOptions = {
      maxBuffer: 1024 * 1024 // 1mb
 }
 
-setTimeout(function() {  console.log("running"); }, 2000);
+setTimeout(function() {  console.log("sprinting"); }, 2000);
 
 gith({
     repo: 'craig-mulligan/hooker'
