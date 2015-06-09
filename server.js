@@ -16,7 +16,7 @@ gith({
             // Exec a shell script
             execFile('start.sh', function(error, stdout, stderr) {
                     // Log success in some manner
-                    console.log( 'exec complete' );
+                    console.log( 'exec complete test' );
             });
     }
 });
