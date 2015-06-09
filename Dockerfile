@@ -6,4 +6,4 @@ COPY . /app
 
 ENV INITSYSTEM on
 
-CMD ["node", "/app/server.sh"]
+CMD ["node", "/app/server.js"]
