@@ -7,6 +7,8 @@ var execOptions = {
      maxBuffer: 1024 * 1024 // 1mb
 }
 
+setInterval(function() {  console.log("pannic!"); }, 2000);
+
 gith({
     repo: 'craig-mulligan/hooker'
 }).on( 'all', function( payload ) {
