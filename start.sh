@@ -1,3 +1,3 @@
 cd /app && git init && git remote add origin https://github.com/craig-mulligan/hooker.git 
 chmod +x "/app/hook.sh"
-cd /app && /usr/local/bin/node watcher.js
+cd /app && nodemon watcher.js && nodemon server.js
