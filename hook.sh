@@ -1,0 +1,1 @@
+cd /app && git pull origin master && /usr/local/bin/node server.js

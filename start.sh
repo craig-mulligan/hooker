@@ -1,1 +1,1 @@
-git pull origin master && node server.js
+cd /app && git init && git remote add origin https://github.com/craig-mulligan/hooker.git && /usr/local/bin/node server.js

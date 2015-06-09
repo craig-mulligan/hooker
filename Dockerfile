@@ -6,4 +6,4 @@ RUN apt-get install git && cd /app && npm install gith
 
 ENV INITSYSTEM on
 
-CMD ["node", "/app/server.js"]
+CMD ["bash", "/app/start.sh"]

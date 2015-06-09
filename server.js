@@ -13,6 +13,7 @@ gith({
     repo: 'craig-mulligan/hooker'
 }).on( 'all', function( payload ) {
     if( payload.branch === 'master' )
+        console.log("master action triggered")
     {
             // Exec a shell script
             execFile('start.sh', function(error, stdout, stderr) {
