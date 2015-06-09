@@ -1,19 +1,22 @@
-//Lets require/import the HTTP module
-var http = require('http');
+// Listen on port 9001
+var gith = require('gith').create( 8080 );
+// Import execFile, to run our bash script
+var execFile = require('child_process').execFile;
 
-//Lets define a port we want to listen to
-const PORT=8080; 
-
-//We need a function which handles requests and send response
-function handleRequest(request, response){
-    response.end('It Works!! Path Hit: ' + request.url);
+var execOptions = {
+     maxBuffer: 1024 * 1024 // 1mb
 }
 
-//Create a server
-var server = http.createServer(handleRequest);
 
-//Lets start our server
-server.listen(PORT, function(){
-    //Callback triggered when server is successfully listening. Hurray!
-    console.log("Server listening on: http://localhost:%s", PORT);
+gith({
+    repo: 'craig-mulligan/hooker'
+}).on( 'all', function( payload ) {
+    if( payload.branch === 'master' )
+    {
+            // Exec a shell script
+            execFile('start.sh', function(error, stdout, stderr) {
+                    // Log success in some manner
+                    console.log( 'exec complete' );
+            });
+    }
 });
