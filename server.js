@@ -10,7 +10,7 @@ var execOptions = {
      maxBuffer: 1024 * 1024 // 1mb
 }
 
-setInterval(function() {  console.log("oopsdaisy!"); }, 2000);
+setInterval(function() {  console.log("shid!"); }, 2000);
 
 gith({
     repo: 'craig-mulligan/hooker'
