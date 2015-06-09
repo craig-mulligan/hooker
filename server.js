@@ -1,5 +1,5 @@
 // Listen on port 9001
-var gith = require('gith').create( 8080 );
+var gith = require('gith').create(8080);
 // Import execFile, to run our bash script
 var execFile = require('child_process').execFile;
 
@@ -12,6 +12,7 @@ setInterval(function() {  console.log("tintings"); }, 2000);
 gith({
     repo: 'craig-mulligan/hooker'
 }).on( 'all', function( payload ) {
+    console.log("master action triggered")
     if( payload.branch === 'master' )
         console.log("master action triggered")
     {

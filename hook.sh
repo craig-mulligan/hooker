@@ -1,1 +1,1 @@
-cd /app && pkill -f node && git reset --hard origin/master && git reset --hard origin/master && /usr/local/bin/node server.js
+cd /app && pkill -f node && git fetch && git reset --hard origin/master && /usr/local/bin/node server.js
